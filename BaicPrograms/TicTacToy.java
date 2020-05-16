@@ -32,6 +32,18 @@ public class TicTacToy {
 			array[row][col]=2;
 		}
 	}
+	public static void display()
+	{
+		for(int i=0;i<3;i++)
+		{
+			for(int j=0;j<3;j++)
+			{
+				System.out.print(array[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("\n\n");
+	}
 	public static boolean checkingWinOrLose(int arr[][],int n)
 	{
 		   if (
@@ -46,16 +58,28 @@ public class TicTacToy {
 	}
 	public static void main(String[] args) {
 	
+		for(int i=0;i<3;i++)
+			for(int j=0;j<3;j++)
+				array[i][j]=0;
+		
 		for(int i=1;i<5;i++)
 		{
 			if(i==9)
 				break;
 			userInputs();
+			display();
 			if(checkingWinOrLose(array, 2))
+			{
 				System.out.println("you won");
+				break;
+			}
 			systemInputs();
+			display();
 			if(checkingWinOrLose(array, 1))
+				{
 				System.out.println("System won");
+				break;
+				}
 		}
 	}
 }

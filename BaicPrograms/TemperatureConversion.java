@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TemperatureConversion {
 
-	void conversion(double celsius,double faranheet)
+	public static void conversion(double celsius,double faranheet)
 	{
 		celsius= (celsius*9/5)+32;
 		faranheet= (faranheet-32)*5/9;
@@ -14,7 +14,6 @@ public class TemperatureConversion {
 		double celsius=scan.nextDouble();
 		double faranheet=scan.nextDouble();
 		scan.close();
-		Temperature t=new Temperature();
-		t.conversion(celsius, faranheet);
+		conversion(celsius, faranheet);
 	}
 }

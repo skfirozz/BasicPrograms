@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import Soriting.Bubble_Sort;
-
 public class BubbleSort {
 
 	void bubble_sort(int array[])
